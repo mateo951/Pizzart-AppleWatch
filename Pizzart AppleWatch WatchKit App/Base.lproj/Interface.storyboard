@@ -124,7 +124,7 @@
             <objects>
                 <controller id="VVr-t4-I5c" customClass="IngredientsViewController" customModule="Pizzart_AppleWatch_WatchKit_Extension">
                     <items>
-                        <label width="100" alignment="left" text="Ingredients" textAlignment="center" id="UEl-Vo-dGh">
+                        <label width="100" alignment="left" text="First Topping " textAlignment="center" id="UEl-Vo-dGh">
                             <fontDescription key="font" name="ArtBrewery" family="Art Brewery" pointSize="30"/>
                             <variation key="device=watch42mm" width="156"/>
                         </label>
@@ -253,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="211.84615384615387" y="567.97435897435901"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Enjoy It-->
         <scene sceneID="rrt-iJ-C29">
             <objects>
-                <controller id="eWE-dw-iFs">
+                <controller identifier="Enjoy It" id="eWE-dw-iFs">
                     <items>
                         <button width="1" height="100" alignment="center" verticalAlignment="bottom" title="Order" id="qAL-1I-unf">
                             <fontDescription key="font" type="system" pointSize="17"/>
@@ -291,7 +291,7 @@
             <objects>
                 <controller id="hfP-rH-cBq" customClass="Ingredients2ViewController" customModule="Pizzart_AppleWatch_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Ingredients" textAlignment="center" id="aah-eF-XjE">
+                        <label alignment="center" text="Second Topping" textAlignment="center" id="aah-eF-XjE">
                             <fontDescription key="font" name="ArtBrewery" family="Art Brewery" pointSize="30"/>
                         </label>
                         <picker height="100" alignment="left" id="ICM-L5-9mA">
@@ -330,7 +330,7 @@
             <objects>
                 <controller id="voM-NG-hgH" customClass="Ingredients3ViewController" customModule="Pizzart_AppleWatch_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Ingredients" id="bH7-0U-HhR">
+                        <label alignment="center" text="Third Topping" id="bH7-0U-HhR">
                             <fontDescription key="font" name="ArtBrewery" family="Art Brewery" pointSize="30"/>
                         </label>
                         <picker height="100" alignment="left" id="bAQ-vr-JGY">
@@ -339,7 +339,8 @@
                         <button width="1" height="100" alignment="left" title="Next" id="kc8-Yq-fWw">
                             <variation key="device=watch42mm" height="32"/>
                             <connections>
-                                <segue destination="eWE-dw-iFs" kind="push" id="oxa-ge-pua"/>
+                                <action selector="Next" destination="voM-NG-hgH" id="iSP-t9-Esp"/>
+                                <segue destination="eWE-dw-iFs" kind="push" identifier="Segue" id="Wt9-qd-Dt2"/>
                             </connections>
                         </button>
                     </items>
@@ -358,16 +359,17 @@
                         </mask>
                     </variation>
                     <connections>
+                        <outlet property="Order" destination="kc8-Yq-fWw" id="746-iG-H4y"/>
                         <outlet property="picker" destination="bAQ-vr-JGY" id="vU4-z1-rxm"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="800.30769230769238" y="567.97435897435901"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Finish-->
         <scene sceneID="zTg-i0-gfe">
             <objects>
-                <controller id="qH2-MM-mKZ">
+                <controller identifier="Finish" id="qH2-MM-mKZ">
                     <items>
                         <button width="1" height="100" alignment="left" verticalAlignment="bottom" title="Restart" id="3wG-mG-RDt">
                             <variation key="device=watch42mm" height="35"/>
